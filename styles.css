@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+}
+
+body{
+    background-color: rgb(101, 100, 100);
+}
+
+.main{
+   
+
+    margin-top: 35px;
+    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.navbar{
+    /* position: sticky; */
+    background-color: white;
+}
+
+.logo{
+    display: flex;
+    gap: 18px;
+}
+
+.logo > i{
+    font-size: 30px;
+}
+
+.logo > h1{
+    font-size: 30px;
+}
+
+#userID{
+    width: 350px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid rgb(89, 88, 88);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px;
+    padding-left: 16px;
+}
+
+button{
+    width: 90px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid rgb(89, 88, 88);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+    color: black;
+    background-color: white;
+}
+
+.firstDiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.secondDiv{
+    display: flex;
+    background-color: #fcfcfc;
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 500px;
+}
+
+.secondDivHidden{
+    display: none;
+}
+
+
+.thirdDiv{
+    background-color: (101, 100, 100);
+    display: flex;
+    justify-content: space-around;
+    /* margin: 30px; */
+    margin-top: 7px;
+    margin-left: 30px;
+    width: 45%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    margin-left: 20px;
+    width: 60%;
+    height: 100%;
+}
+
+.userImg{
+    border-radius: 50%;
+    width: 50%;
+}
+
+
+.Details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 36%;
+
+}
+
+.Details > p{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 15px 0;
+}
+
+.userDetails{
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* height: 200px; */
+    /* justify-content: space-around; */
+    width: 240px;
+    height: 118px;
+    margin-bottom: 180px;
+    margin-top: 0px;
+
+}
+
+.userName{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.userFollow{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Follower{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* gap: 30px; */
+}
+
+.repo{
+    /* font-size: 2em; */
+    text-align: center;
+    background-color: white;
+    width: 25%;
+    height: 130px;
+    border-radius: 10px;
+    /* gap: 25px; */
+}
+
+
+
+.repo > p:nth-child(2){
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.repo > p:nth-child(3){
+    margin-top: 9px;
+    font-size: 1.9em;
+}
+
+.VisitProfile{
+    background-color: rgb(60, 60, 60);
+    width: 55%;
+    height: 15%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.VisitProfile > a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.VisitProfile > a:hover{
+    color: black;
+}
+
+
+
+.loader{
+    width: 45px;
+    height: 45px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after{
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-bottom-color: #FF3D00;
+
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .secondDiv {
+        width: 55%;
+    }
+    
+    .thirdDiv {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .secondDiv {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .thirdDiv {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .userDetails {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .firstDiv {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #userID {
+        width: 280px;
+    }
+
+    .secondDiv {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .userInfo {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .Details {
+        align-items: center;
+    }
+
+    .userFollow {
+        width: 100%;
+    }
+
+    .Follower {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .repo {
+        width: 45%;
+    }
+
+    .VisitProfile {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo > h1 {
+        font-size: 24px;
+    }
+
+    .logo > i {
+        font-size: 24px;
+    }
+
+    #userID {
+        width: 240px;
+        font-size: 16px;
+    }
+
+    .userImg {
+        width: 70%;
+    }
+
+    .userName {
+        font-size: 1.2em;
+    }
+
+    .Details > p {
+        font-size: 1em;
+    }
+
+    .repo {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .repo > p:nth-child(3) {
+        font-size: 1.5em;
+    }
+
+    .VisitProfile {
+        font-size: 1.2rem;
+    }
+}
